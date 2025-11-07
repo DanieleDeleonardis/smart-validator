@@ -1,6 +1,7 @@
 {
   "name": "smart-validator",
   "version": "1.0.0",
+  "type": "module",
   "main": "server.js",
   "scripts": {
     "test": "node server.js"
