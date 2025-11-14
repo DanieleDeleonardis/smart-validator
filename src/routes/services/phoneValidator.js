@@ -1,7 +1,6 @@
-import { parsePhoneNumberFromString } from "libphonenumber-js";
-import { PhoneNumberUtil } from "google-libphonenumber";
+import pkg from "google-libphonenumber";
 
-const phoneUtil = PhoneNumberUtil.getInstance();
+const phoneUtil = pkg.PhoneNumberUtil.getInstance();
 export function validatePhone(phone) {
   try {
     const num = phoneUtil.parse(phone);
