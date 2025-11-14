@@ -7,7 +7,7 @@ export function validatePhone(phone) {
     // const num = parsePhoneNumberFromString(phone);
     if (!num) return { valid: false };
     return {
-      valid: num.isValid(),
+      valid: phoneUtil.isValidNumber(numb),
       country: phoneUtil.getRegionCodeForNumber(num), // num.country,
       format: num.formatInternational()
     };
