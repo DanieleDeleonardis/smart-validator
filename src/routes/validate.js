@@ -5,7 +5,10 @@ import { validateIBAN } from "./services/ibanValidator.js";
 import { validateVAT } from "./services/vatValidator.js";
 import { validateCF } from "./services/cfValidator.js";
 
+import { rateLimiter } from "../middleware/auth.js";
+
 const router = express.Router();
+router.use(rateLimiter);
 
 router.post("/", async (req, res) => {
   const { email, phone, iban, vat, cf } = req.body;
